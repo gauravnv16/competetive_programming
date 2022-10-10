@@ -10,7 +10,7 @@ bool Binary_Search(int arr[],int n,int key){
 
         if(arr[m] == key) return 1;
 
-        if(arr[m] > key) heigh = m - 1;
+        if(arr[m] > key) high = m - 1;
         else{
             low = m + 1;
         }
