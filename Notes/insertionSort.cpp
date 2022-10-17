@@ -2,18 +2,21 @@
 
 using namespace std;
 
-//selection sort
+//insertion sort
 int main()
 {
     int arr[] = {5,1,9,6,2};
     int n = sizeof(arr)/sizeof(arr[0]);
-    int min = 0;
+
     for(int i = 0;i<n;i++){
-        min = i;
-        for(int j = i+1;j<n;j++){
-            if(arr[min] > arr[j]) min = j;
+        int key = arr[i];
+        int j = i-1;
+        while(j>=0 && arr[j]>key){
+            arr[j+1] = arr[j];
+            j--;
         }
-        swap(arr[i],arr[min]);
+        
+        arr[j+1] = key;
     }
     
     
